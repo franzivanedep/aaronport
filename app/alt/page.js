@@ -27,7 +27,7 @@ export default function Haus() {
 
         {/* Right Section */}
         <div className="right">
-          <Image src="/aaron.png" alt="Model" width={400} height={500} className="image" />
+          <Image src="/aaron.png" alt="Model" width={800} height={1000} className="image" />
         </div>
       </div>
 

@@ -13,10 +13,8 @@ export default function LandingPage() {
 
   return (
     <div className="landing-container">
-      <h1 className="landing-title">ALTARO CREATION®</h1>
-      <p className="landing-description">See Gallery</p>
       <button onClick={() => router.push("/alt")} className="continue-button">
-        CLICK HERE TO CONTINUE
+        see gallery
       </button>
     </div>
   );
