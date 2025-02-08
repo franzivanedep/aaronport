@@ -13,14 +13,15 @@ export default function Haus() {
           <div className="top-left">BRAND GUIDELINES</div>
           <h1 className="title">ALTARO CREATION®</h1>
           <p className="description">
-            GUIDELINES THAT FIT THE CREATIVE TEAM THROUGH DESIGN DIRECTIONS AND HAUS EVENTS, CLOTHING, AND IMAGES
+          AARON CHRISTIAN MALTE ALSO KNOWN AS "ALTARO"  IS A FREELANCE TATTOO ARTIST, EVENT PHOTOGRAPER, AND GRAPHIC DESIGNER
+
           </p>
           <div className="est">
             <span className="estBox">EST</span>
-            <span className="estYear">2021</span>
+            <span className="estYear">2022</span>
           </div>
-          <p className="japanese-text">クリエイティブチームのスタジオ・ガイドライン</p>
-          <p className="footer-text">© STUDIO LAB - LOS ANGELES</p>
+          <p className="japanese-text">アーロン・クリスチャン・マルテ</p>
+          <p className="footer-text">© Altaro Design Co. All rights reserved</p>
         </div>
 
         {/* Right Section */}
@@ -36,9 +37,9 @@ export default function Haus() {
           <Image src="/tattoo1.jpg" alt="Tattoo 1" width={300} height={400} className="tattoo-image" />
           <Image src="/tattoo2.jpg" alt="Tattoo 2" width={300} height={400} className="tattoo-image" />
           <Image src="/tattoo3.jfif" alt="Tattoo 3" width={300} height={400} className="tattoo-image" />
-          <Image src="/tattoo1.jpg" alt="Tattoo 1" width={300} height={400} className="tattoo-image" />
-          <Image src="/tattoo1.jpg" alt="Tattoo 1" width={300} height={400} className="tattoo-image" />
-          <Image src="/tattoo1.jpg" alt="Tattoo 1" width={300} height={400} className="tattoo-image" />
+          <Image src="/tattoo4.png" alt="Tattoo 1" width={300} height={400} className="tattoo-image" />
+          <Image src="/tattoo5.png" alt="Tattoo 1" width={300} height={400} className="tattoo-image" />
+          <Image src="/tattoo6.png" alt="Tattoo 1" width={300} height={400} className="tattoo-image" />
 
         </div>
       </div>
