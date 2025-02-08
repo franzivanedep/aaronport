@@ -33,16 +33,18 @@
 .title {
   font-size: 6rem;
   font-weight: 900;
-  margin-bottom: 20px;
+  margin-bottom: 10px; /* Reduce spacing below the title */
   letter-spacing: -2px;
   color: #000;
+  line-height: 0.9; /* Reduce line spacing */
 }
+
 
 /* Description */
 .description {
   font-size: 14px;
   color: #000;
-  max-width: 320px;
+  max-width: 450px;
   line-height: 1.5;
 }
 
@@ -153,4 +155,68 @@
   height: auto;
   display: inline-block;
   margin-right: 20px;
+}
+.book-now {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 60px; /* Prevent button from being too long */
+  min-width: 400px; /* Ensure it doesn't shrink too much */
+}
+
+.book-now:hover {
+  background-color: white;
+  color: black;
+}
+
+:root {
+  --font-poppins: "Poppins", sans-serif;
+}
+
+.landing-container {
+  font-family: var(--font-poppins);
+  text-align: center;
+  height: 100vh;
+  background-image: url("/qpal.png"); /* Change to your image path */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+.landing-title {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.landing-description {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.continue-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  transition: 0.3s;
+}
+
+.continue-button:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
 }
