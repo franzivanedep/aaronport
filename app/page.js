@@ -25,7 +25,7 @@ export default function Haus() {
 
         {/* Right Section */}
         <div className="right">
-          <Image src="/ivan.jpg" alt="Model" width={400} height={500} className="image" />
+          <Image src="/aaron.png" alt="Model" width={400} height={500} className="image" />
         </div>
       </div>
 
@@ -36,6 +36,10 @@ export default function Haus() {
           <Image src="/tattoo1.jpg" alt="Tattoo 1" width={300} height={400} className="tattoo-image" />
           <Image src="/tattoo2.jpg" alt="Tattoo 2" width={300} height={400} className="tattoo-image" />
           <Image src="/tattoo3.jfif" alt="Tattoo 3" width={300} height={400} className="tattoo-image" />
+          <Image src="/tattoo1.jpg" alt="Tattoo 1" width={300} height={400} className="tattoo-image" />
+          <Image src="/tattoo1.jpg" alt="Tattoo 1" width={300} height={400} className="tattoo-image" />
+          <Image src="/tattoo1.jpg" alt="Tattoo 1" width={300} height={400} className="tattoo-image" />
+
         </div>
       </div>
     </>

@@ -97,7 +97,6 @@
 
 .image {
   object-fit: cover;
-  border-radius: 20px;
   max-width: 90%;
   height: auto;
 } 
@@ -137,11 +136,12 @@
   overflow: hidden;
   white-space: nowrap;
   animation: scroll 20s linear infinite;
+  transform: translateX(-50%);
 }
 
 @keyframes scroll {
   0% {
-    transform: translateX(100%);
+    transform: translateX(50%);
   }
   100% {
     transform: translateX(-100%);
@@ -149,7 +149,7 @@
 }
 
 .tattoo-image {
-  max-height: 500px;
+  max-width: 250px;
   height: auto;
   display: inline-block;
   margin-right: 20px;
