@@ -4,26 +4,27 @@
 
 .container {
   display: flex;
-  height: 100vh;
+  flex-direction: column; /* Stack left and right sections vertically on mobile */
+  height: auto; /* Allow container to grow based on content */
   background-color: #f2ede6;
   overflow: hidden;
 }
 
 /* Left Section */
 .left {
-  width: 50%;
+  width: 100%; /* Full width on mobile */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 60px;
+  padding: 20px; /* Reduced padding for mobile */
   position: relative;
 }
 
 /* Top Left Text */
 .top-left {
   position: absolute;
-  top: 30px;
-  left: 60px;
+  top: 20px; /* Adjusted for mobile */
+  left: 20px; /* Adjusted for mobile */
   font-size: 12px;
   font-weight: bold;
   color: #000;
@@ -31,14 +32,13 @@
 
 /* Main Title */
 .title {
-  font-size: 6rem;
+  font-size: 3rem; /* Reduced font size for mobile */
   font-weight: 900;
-  margin-bottom: 10px; /* Reduce spacing below the title */
+  margin-bottom: 10px;
   letter-spacing: -2px;
   color: #000;
-  line-height: 0.9; /* Reduce line spacing */
+  line-height: 0.9;
 }
-
 
 /* Description */
 .description {
@@ -84,13 +84,13 @@
   font-size: 12px;
   color: #000;
   position: absolute;
-  bottom: 40px;
-  left: 60px;
+  bottom: -8px; /* Adjusted for mobile */
+  left: 20px; /* Adjusted for mobile */
 }
 
 /* Right Section */
 .right {
-  width: 50%;
+  width: 100%; /* Full width on mobile */
   position: relative;
   display: flex;
   justify-content: center;
@@ -99,33 +99,21 @@
 
 .image {
   object-fit: cover;
-  max-width: 90%;
+  max-width: 100%; /* Ensure image fits within the screen */
   height: auto;
-} 
-
-/* Side Labels */
-.side-label {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: rotate(90deg) translateY(-50%);
-  font-size: 10px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #000;
 }
 
 /* Tattoo Section */
 .tattoo-section {
   background-color: #f2ede6;
-  padding: 60px;
+  padding: 20px; /* Reduced padding for mobile */
   text-align: center;
   overflow: hidden;
   position: relative;
 }
 
 .section-title {
-  font-size: 3rem;
+  font-size: 2rem; /* Reduced font size for mobile */
   font-weight: bold;
   color: #000;
   margin-bottom: 20px;
@@ -133,12 +121,11 @@
 
 .tattoo-gallery {
   display: flex;
-  gap: 20px;
+  gap: 10px; /* Reduced gap for mobile */
   flex-wrap: nowrap;
-  overflow: hidden;
+  overflow-x: auto; /* Allow horizontal scrolling on mobile */
   white-space: nowrap;
-  animation: scroll 20s linear infinite;
-  transform: translateX(-50%);
+  animation: scroll 20s linear infinite; /* Keep the animation */
 }
 
 @keyframes scroll {
@@ -151,10 +138,97 @@
 }
 
 .tattoo-image {
-  max-width: 250px;
+  max-width: 150px; /* Smaller images for mobile */
   height: auto;
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 10px; /* Reduced margin for mobile */
+}
+
+/* Book Now Button */
+.book-now {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%; /* Full width on mobile */
+  max-width: 400px; /* Limit maximum width */
+  margin: 20px auto; /* Center the button */
+}
+
+.book-now:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%; /* Ensure modal fits within the screen */
+  text-align: center;
+}
+
+.close-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Desktop Styles (Original CSS) */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row; /* Revert to side-by-side layout on desktop */
+    height: 100vh;
+  }
+
+  .left {
+    width: 50%; /* Revert to original width */
+    padding: 60px; /* Revert to original padding */
+  }
+
+  .right {
+    width: 50%; /* Revert to original width */
+  }
+
+  .title {
+    font-size: 6rem; /* Revert to original font size */
+  }
+
+  .section-title {
+    font-size: 3rem; /* Revert to original font size */
+  }
+
+  .tattoo-gallery {
+    gap: 20px; /* Revert to original gap */
+  }
+
+  .tattoo-image {
+    max-width: 250px; /* Revert to original image size */
+  }
 }
 .book-now {
   display: inline-block;

@@ -10,8 +10,13 @@ export default function Haus() {
   return (
     <>
       <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
         <title>HAUS® Brand Guidelines</title>
       </Head>
+
       <div className="container">
         {/* Left Section */}
         <div className="left">
@@ -50,76 +55,44 @@ export default function Haus() {
       <div className="tattoo-section">
         <h2 className="section-title">TATTOOS</h2>
         <div className="tattoo-gallery">
-          <Image
-            src="/tattoo1.jpg"
-            alt="Tattoo 1"
-            width={300}
-            height={400}
-            className="tattoo-image"
-          />
-          <Image
-            src="/tattoo2.jpg"
-            alt="Tattoo 2"
-            width={300}
-            height={400}
-            className="tattoo-image"
-          />
-          <Image
-            src="/tattoo3.jfif"
-            alt="Tattoo 3"
-            width={300}
-            height={400}
-            className="tattoo-image"
-          />
-          <Image
-            src="/tattoo4.png"
-            alt="Tattoo 1"
-            width={300}
-            height={400}
-            className="tattoo-image"
-          />
-          <Image
-            src="/tattoo5.png"
-            alt="Tattoo 1"
-            width={300}
-            height={400}
-            className="tattoo-image"
-          />
-          <Image
-            src="/tattoo6.png"
-            alt="Tattoo 1"
-            width={300}
-            height={400}
-            className="tattoo-image"
-          />
+          {[1, 2, 3, 4, 5, 6].map((num) => (
+            <Image
+              key={num}
+              src={`/tattoo${num}.png`}
+              alt={`Tattoo ${num}`}
+              width={300}
+              height={400}
+              className="tattoo-image"
+            />
+          ))}
         </div>
       </div>
 
+      {/* Modal */}
       {isModalOpen && (
-  <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
-    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-      <h2>Contact Information</h2>
-      <p>
-        Facebook:{" "}
-        <a
-          href="https://www.facebook.com/profile.php?id=61571900350996"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="fb-link"
-        >
-          Aaron Malte
-        </a>
-      </p>
-      <p>Email: <a href="mailto:contactacmalte@gmail.com">contactacmalte@gmail.com</a></p>
-      <p>Phone: <a href="tel:+639913205739">+63 991 320 5739</a></p>
-      <p>Location: Around Metro Manila and Bulacan</p>
-      <p>Inquire now !</p>
+        <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <h2>Contact Information</h2>
+            <p>
+              Facebook:{" "}
+              <a
+                href="https://www.facebook.com/profile.php?id=61571900350996"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="fb-link"
+              >
+                Aaron Malte
+              </a>
+            </p>
+            <p>Email: <a href="mailto:contactacmalte@gmail.com">contactacmalte@gmail.com</a></p>
+            <p>Phone: <a href="tel:+639913205739">+63 991 320 5739</a></p>
+            <p>Location: Around Metro Manila and Bulacan</p>
+            <p>Inquire now!</p>
 
-      <button className="close-button" onClick={() => setIsModalOpen(false)}>Close</button>
-    </div>
-  </div>
-)}
-
+            <button className="close-button" onClick={() => setIsModalOpen(false)}>Close</button>
+          </div>
+        </div>
+      )}
     </>
   );
 }
