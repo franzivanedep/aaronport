@@ -8,13 +8,14 @@ const poppins = Poppins({
   weight: ["400", "700"], // Normal & Bold
   variable: "--font-poppins",
 });
+
 export default function LandingPage() {
   const router = useRouter();
 
   return (
-    <div className="landing-container">
+    <div className={`landing-container ${poppins.variable}`}>
       <button onClick={() => router.push("/alt")} className="continue-button">
-        see gallery
+        See Gallery
       </button>
     </div>
   );
