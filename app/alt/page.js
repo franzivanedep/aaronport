@@ -37,7 +37,7 @@ export default function Haus() {
         {/* Right Section */}
         <div className="right">
           <Image
-            src="/tite.jfif"
+            src="/aaronma.png"
             alt="Model"
             width={800}
             height={1000}
