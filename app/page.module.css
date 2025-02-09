@@ -256,11 +256,11 @@ a.secondary {
 
 .textOverlay {
   position: absolute;
-  top: 15%;
+  top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: rgb(241, 35, 35);
+  color: rgb(255, 255, 255);
   width: 100%;
   padding: 0 1rem;
 }
