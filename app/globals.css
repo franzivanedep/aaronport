@@ -377,3 +377,18 @@
   color: black;
   border: 1px solid black;
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: var(--font-inter);
+}
+
+button {
+  font-family: inherit;
+}
+
